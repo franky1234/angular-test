@@ -1,0 +1,16 @@
+.mat-card-image {
+  height: 250px;
+  width: 250px;
+}
+.login-option-component {
+  text-align: center;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-container > * {
+  width: 100%;
+}

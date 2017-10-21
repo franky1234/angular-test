@@ -1,0 +1,14 @@
+.example-card {
+  width: 250px;
+}
+.mat-card-title {
+  font-size: 11px;
+}
+img{
+  width: 100%;
+  height: 80px;
+}
+
+.option-button-add {
+  text-align: right;
+}

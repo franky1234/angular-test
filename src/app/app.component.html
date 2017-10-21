@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
-  <span>
-      <button mat-mini-fab color="primary">
-        <mat-icon>list</mat-icon>
-      </button> 
-  </span>
+    <button mat-mini-fab color="primary">
+      <mat-icon>list</mat-icon>
+    </button> 
+    <span class="example-spacer"></span>
+    <button mat-button (click)="logoutUser()">Basic</button>
 </mat-toolbar>
 <div class="title-position">
   <h1>{{ title }}</h1>
 </div>
-<div class="container">
+<!--div class="container">
   <div class="row">
     <div class="col-md-12">
       <h4> Bootstrap </h4>
     </div>
   </div>
-</div>
+</div-->
 <router-outlet></router-outlet>

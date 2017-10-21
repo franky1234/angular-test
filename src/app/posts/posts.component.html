@@ -1,0 +1,27 @@
+<h3> List of articles</h3>
+<div class="option-button-add">
+    <button mat-raised-button color="primary" (click)="createNewPost()"> 
+      Add Picture
+    </button>
+</div>
+<mat-grid-list cols="5" rowHeight="1:1" *ngIf="listPosts">
+    <mat-grid-tile *ngFor="let post of listPosts">
+      <mat-card  class="example-card" (click)="goToEditArticle(post.id)">
+          <mat-card-title>
+            <mat-card-title>
+              <span> <strong>{{ post.title }}</strong></span>
+            </mat-card-title>
+            <mat-card-title>
+              <img [src]="post.smallImage">
+            </mat-card-title>
+            <p>
+              {{ post.shortDescription }}
+            </p>
+          </mat-card-title>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+   
+  </mat-grid-list>
+  

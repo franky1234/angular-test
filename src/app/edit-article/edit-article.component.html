@@ -1,0 +1,39 @@
+<h1> Edit Mode: {{ singlePost['noBindingText'] }}</h1>
+<div class="container" *ngIf="singlePost">
+  <div class="row">
+    <div class="col-md-6">
+        <img [src]="singlePost.largeImage">
+    </div>
+    <div class="col-md-6">
+        <form>
+          <div class="example-container">
+              <label> TITLE: </label>
+              <mat-form-field>
+                <input matInput placeholder="Enter title" [(ngModel)]="singlePost.title" name="title">
+              </mat-form-field>
+              
+              <label>SHORT DESCRIPTION:</label>
+              <mat-form-field>
+                  <input matInput placeholder="Enter title" [(ngModel)]="singlePost.shortDescription" name="short">
+              </mat-form-field>  
+              
+              <label> BODY: </label>
+              <mat-form-field>
+                <textarea matInput rows="5" placeholder="Enter description"
+                [(ngModel)]="singlePost.body" name="body"
+                >
+                  {{ singlePost.body }}
+                </textarea>
+              </mat-form-field>
+          </div>
+        </form>
+    </div>
+    <div class="orientation-buttons">
+        <button mat-raised-button (click)="onUpdatePost()">Save</button>
+        <button mat-raised-button color="primary" (click)="redirectToList()">Cancel</button>
+    </div>
+  </div>
+</div>
+<pre>
+  {{ singlePost | json }}
+</pre>

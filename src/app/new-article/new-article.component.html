@@ -1,0 +1,39 @@
+<h1> Create a new article</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <img [src]="''">
+    </div>
+    <div class="col-md-6">
+        <form>
+          <div class="example-container">
+              <label> TITLE: </label>
+              <mat-form-field>
+                <input matInput placeholder="Enter title" [(ngModel)]="newPost.title" name="title">
+              </mat-form-field>
+              
+              <label>SHORT DESCRIPTION:</label>
+              <mat-form-field>
+                  <input matInput placeholder="Enter title" [(ngModel)]="newPost.shortDescription" name="short">
+              </mat-form-field>  
+              
+              <label> BODY: </label>
+              <mat-form-field>
+                <textarea matInput rows="5" placeholder="Enter description"
+                [(ngModel)]="newPost.body" name="body"
+                >
+                  {{ newPost.body }}
+                </textarea>
+              </mat-form-field>
+          </div>
+        </form>
+    </div>
+    <div class="orientation-buttons">
+        <button mat-raised-button (click)="onSavePost()">Save</button>
+        <button mat-raised-button color="primary" (click)="redirectToList()">Cancel</button>
+    </div>
+  </div>
+</div>
+<pre>
+  {{ newPost | json }}
+</pre>

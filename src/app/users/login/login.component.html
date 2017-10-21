@@ -1,0 +1,27 @@
+<div class="login-option-component" *ngIf="usersList">
+  <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Welcome</mat-card-title>
+        <mat-card-subtitle>Login</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="http://www.sonypictures.com/movies/pixels/assets/images/onesheet.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Enter your info please
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="inputs-container">
+            <mat-form-field>
+              <input matInput placeholder="Enter your email" [(ngModel)]="user.email">
+            </mat-form-field>
+          
+            <mat-form-field>
+              <input matInput placeholder="Enter your password" [(ngModel)]="user.password">
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="primary"  (click)="onLogin()">Login</button>
+      </mat-card-actions>
+    </mat-card>
+</div>

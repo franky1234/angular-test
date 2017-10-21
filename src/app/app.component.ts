@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'at-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Test Angular Project';
+  constructor(private route: Router) {}
+  logoutUser() {
+    this.route.navigate(['/login']);
+  }
 }
